@@ -1,4 +1,5 @@
 # UniSaathi
+<<<<<<< HEAD
 
 A campus companion chatbot for university students: exams, CGPA, hostel, internships, placements, and study stress.
 
@@ -17,3 +18,6 @@ Without an API key, replies come from built-in campus notes. For live AI, copy `
 
 - `npm run dev` — frontend + API together
 - `npm run build` then `npm start` — production (serves the built app from the API)
+=======
+an AI powered chatbot and map system with enhanced features for university students
+>>>>>>> 03f62a907a41c3cc1b6d94dcb6bb90adbc7efb5a
