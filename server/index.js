@@ -39,11 +39,13 @@ app.post("/api/chat", async (req, res) => {
 
 if (fs.existsSync(path.join(dist, "index.html"))) {
   app.use(express.static(dist))
-  app.use((_req, res) => {
+  app.get("*", (req, res, next) => {
+    if (req.path.startsWith("/api")) return next()
     res.sendFile(path.join(dist, "index.html"))
   })
 }
 
-app.listen(port, () => {
-  console.log(`UniSaathi API on http://localhost:${port}`)
+app.listen(port, "0.0.0.0", () => {
+  console.log(`UniSaathi running on port ${port}`)
 })
+
