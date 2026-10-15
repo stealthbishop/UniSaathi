@@ -39,7 +39,7 @@ app.post("/api/chat", async (req, res) => {
 
 if (fs.existsSync(path.join(dist, "index.html"))) {
   app.use(express.static(dist))
-  app.get("*", (req, res, next) => {
+  app.get("{*splat}", (req, res, next) => {
     if (req.path.startsWith("/api")) return next()
     res.sendFile(path.join(dist, "index.html"))
   })
